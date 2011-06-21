@@ -109,7 +109,7 @@ INSTALLED_APPS = (
     #'grappelli',
     #'pagination',
     #'annoying',
-    #'registration',
+    'registration',
     #'sorl.thumbnail',
 
     # django apps
@@ -145,3 +145,17 @@ LOGGING = {
 }
 
 
+########################################################################################################################
+# Auth and register
+########################################################################################################################
+
+
+LOGIN_URL = '/account/login/'
+
+LOGOUT_URL = '/account/logout/'
+
+LOGIN_REDIRECT_URL = '/'
+
+PASSWORD_RESET_TIMEOUT_DAYS = 3
+
+ACCOUNT_ACTIVATION_DAYS = 3
