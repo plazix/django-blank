@@ -21,7 +21,7 @@ server {
 #    listen 80;
 #    server_name media.yourdomain.tld;
 #
-#    root /path/to/project/dir/;
+#    root /path/to/media/dir/;
 #
 #    access_log  off;
 #    expires     1d;
