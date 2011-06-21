@@ -1,0 +1,10 @@
+<uwsgi>
+    <!--<processes>2</processes>-->
+    <socket>/path/to/project/var/run/uwsgi.sock</socket>
+    <pidfile>/path/to/project/var/run/uwsgi.pid</pidfile>
+    <home>/path/to/project/</home>
+    <module>wsgi</module>
+    <chmod-socket>666</chmod-socket>
+    <master/>
+    <enable-threads/>
+</uwsgi>

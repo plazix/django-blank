@@ -1,0 +1,17 @@
+<VirtualHost *:80>
+#<VirtualHost *:8080>
+    ServerAdmin admin@yourdomain.tld
+    ServerName yourdomain.tld
+    ServerAlias www.yourdomain.tld;
+
+    #DocumentRoot ""
+
+    Alias /media/ "/path/to/media/dir/"
+
+    WSGIScriptAlias / "/path/to/wsgi.py"
+    #WSGIScriptReloading On
+    #WSGIReloadMechanism Process
+
+    ErrorLog "/path/to/project/var/log/apache2_error.log"
+    #CustomLog "/path/to/project/var/log/apache2_access.log" common
+</VirtualHost>

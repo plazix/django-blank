@@ -1,0 +1,24 @@
+server {
+    listen 80;
+    server_name yourdomain.tld www.yourdomain.tld;
+
+    location / {
+        uwsgi_pass  unix:///path/to/project/var/run/uwsgi.sock;
+        include     /usr/local/etc/nginx/uwsgi_params;
+    }
+
+    location ^~ /media/ {
+        root    /path/to/project/dir/;
+        expires 1d;
+    }
+}
+
+#server {
+#    listen 80;
+#    server_name media.yourdomain.tld;
+#
+#    root /path/to/project/dir/;
+#
+#    access_log  off;
+#    expires     1d;
+#}

@@ -1,0 +1,28 @@
+#upstream apache2 {
+#    server  127.0.0.1:8080;
+#}
+
+server {
+    listen 80;
+    server_name yourdomain.tld www.yourdomain.tld;
+
+    location / {
+        proxy_pass  apache2;
+        include     /usr/local/etc/nginx/proxy.conf;
+    }
+
+    location ^~ /media/ {
+        root    /path/to/project/dir/;
+        expires 1d;
+    }
+}
+
+#server {
+#    listen 80;
+#    server_name media.yourdomain.tld;
+#
+#    root /path/to/project/dir/;
+#
+#    access_log  off;
+#    expires     1d;
+#}
