@@ -7,6 +7,9 @@
     #DocumentRoot ""
 
     Alias /media/ "/path/to/media/dir/"
+    <Location "/media/">
+        SetHandler None
+    </Location>
 
     WSGIScriptAlias / "/path/to/wsgi.py"
     #WSGIScriptReloading On
