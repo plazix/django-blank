@@ -11,6 +11,12 @@ server {
         root    /path/to/project/dir/;
         expires 1d;
     }
+
+    error_page 502 503 504 @maintenance;
+    location @maintenance {
+        root /path/to/media/dir/templates;
+        rewrite ^(.*)$ /500.html break;
+    }
 }
 
 #server {
