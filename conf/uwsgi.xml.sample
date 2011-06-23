@@ -1,8 +1,9 @@
 <uwsgi>
-    <!--<processes>2</processes>-->
-    <socket>/path/to/project/var/run/uwsgi.sock</socket>
-    <pidfile>/path/to/project/var/run/uwsgi.pid</pidfile>
-    <home>/path/to/project/</home>
+    <!-- <processes>2</processes> -->
+    <socket>var/run/uwsgi.sock</socket>
+    <pidfile>var/run/uwsgi.pid</pidfile>
+    <!-- <home></home> -->
+    <touch-reload>wsgi.py</touch-reload>
     <module>wsgi</module>
     <chmod-socket>666</chmod-socket>
     <master/>
