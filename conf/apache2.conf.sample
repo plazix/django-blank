@@ -2,7 +2,7 @@
 #<VirtualHost *:8080>
     ServerAdmin admin@yourdomain.tld
     ServerName yourdomain.tld
-    ServerAlias www.yourdomain.tld;
+    ServerAlias www.yourdomain.tld
 
     #DocumentRoot ""
 
