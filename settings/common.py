@@ -4,6 +4,25 @@ import os, sys
 
 
 ########################################################################################################################
+# Paths
+########################################################################################################################
+
+
+PROJECT_ROOT = os.path.dirname(os.path.dirname(__file__))
+
+sys.path.insert(0, os.path.join(PROJECT_ROOT, 'vendors'))
+sys.path.insert(0, os.path.join(PROJECT_ROOT, 'apps'))
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, MEDIA_URL.strip('/'))
+
+STORAGE_URL = MEDIA_URL + 'storage/'
+STORAGE_ROOT = os.path.join(PROJECT_ROOT, STORAGE_URL.strip('/'))
+
+ADMIN_MEDIA_PREFIX = MEDIA_URL + 'admin/'
+
+
+########################################################################################################################
 # Consts
 ########################################################################################################################
 
@@ -16,7 +35,17 @@ MANAGERS = ADMINS
 
 SITE_ID = 1
 
-SECRET_KEY = 'your secret key'
+SECRET_KEY = 'your_secret_key'
+
+'''
+KEY_PATH = os.path.join(PROJECT_ROOT, 'var', 'data', 'secret.key')
+try:
+    SECRET_KEY = open(KEY_PATH).read()
+except IOError:
+    import random
+    SECRET_KEY = "".join([random.choice("abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)") for i in range(50)])
+    open(KEY_PATH, 'w').write(SECRET_KEY)
+'''
 
 
 ########################################################################################################################
@@ -41,25 +70,6 @@ TIME_ZONE = 'Europe/Moscow'
 LANGUAGE_CODE = 'ru'
 
 DEFAULT_CHARSET = 'UTF-8'
-
-
-########################################################################################################################
-# Paths
-########################################################################################################################
-
-
-PROJECT_ROOT = os.path.dirname(os.path.dirname(__file__))
-
-sys.path.insert(0, os.path.join(PROJECT_ROOT, 'vendors'))
-sys.path.insert(0, os.path.join(PROJECT_ROOT, 'apps'))
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, MEDIA_URL.strip('/'))
-
-STORAGE_URL = MEDIA_URL + 'storage/'
-STORAGE_ROOT = os.path.join(PROJECT_ROOT, STORAGE_URL.strip('/'))
-
-ADMIN_MEDIA_PREFIX = MEDIA_URL + 'admin/'
 
 
 ########################################################################################################################
