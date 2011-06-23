@@ -1,0 +1,4 @@
+[program:yourproject]
+directory=/path/to/project/
+command=uwsgi -x conf/uwsgi.xml
+user=yourproject_user
