@@ -106,6 +106,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
 
+    #'core.middleware.git_revision.GitRevisionMiddleware',
     #'pagination.middleware.PaginationMiddleware',
 )
 
