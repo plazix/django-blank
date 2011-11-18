@@ -7,7 +7,11 @@
     #DocumentRoot ""
 
     Alias /media/ "/path/to/media/dir/"
+    Alias /static/ "/path/to/static/dir/"
     <Location "/media/">
+        SetHandler None
+    </Location>
+    <Location "/static/">
         SetHandler None
     </Location>
 

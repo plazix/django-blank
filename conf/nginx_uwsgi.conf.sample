@@ -12,9 +12,14 @@ server {
         expires 1d;
     }
 
+    location ^~ /static/ {
+        root    /path/to/project/dir/;
+        expires 1d;
+    }
+
     error_page 502 503 504 @maintenance;
     location @maintenance {
-        root /path/to/media/dir/templates;
+        root /path/to/dir/templates;
         rewrite ^(.*)$ /500.html break;
     }
 }
@@ -24,6 +29,16 @@ server {
 #    server_name media.yourdomain.tld;
 #
 #    root /path/to/media/dir/;
+#
+#    access_log  off;
+#    expires     1d;
+#}
+
+#server {
+#    listen 80;
+#    server_name static.yourdomain.tld;
+#
+#    root /path/to/static/dir/;
 #
 #    access_log  off;
 #    expires     1d;
