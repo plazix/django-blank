@@ -16,10 +16,10 @@ sys.path.insert(0, os.path.join(PROJECT_ROOT, 'apps'))
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, MEDIA_URL.strip('/'))
 
-STORAGE_URL = MEDIA_URL + 'storage/'
-STORAGE_ROOT = os.path.join(PROJECT_ROOT, STORAGE_URL.strip('/'))
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip('/'))
 
-ADMIN_MEDIA_PREFIX = MEDIA_URL + 'admin/'
+ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
 
 ########################################################################################################################
@@ -90,6 +90,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.auth',
     'django.core.context_processors.request',
     'django.core.context_processors.media',
+    'django.core.context_processors.static',
     'django.contrib.messages.context_processors.messages',
 )
 
@@ -113,7 +114,7 @@ MIDDLEWARE_CLASSES = (
 # приложения
 INSTALLED_APPS = (
     # apps
-    'core',
+    '...apps.core',
 
     # 3rd party apps
     #'grappelli.dashboard',
@@ -124,12 +125,13 @@ INSTALLED_APPS = (
     #'sorl.thumbnail',
 
     # django apps
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.messages',
     'django.contrib.sessions',
     'django.contrib.sites',
-    'django.contrib.messages',
-    'django.contrib.admin',
+    'django.contrib.staticfiles',
 )
 
 
