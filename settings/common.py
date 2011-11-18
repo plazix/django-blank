@@ -114,11 +114,10 @@ MIDDLEWARE_CLASSES = (
 # приложения
 INSTALLED_APPS = (
     # apps
-    '...apps.core',
+    'core',
 
     # 3rd party apps
-    #'grappelli.dashboard',
-    #'grappelli',
+    'south',
     #'pagination',
     #'annoying',
     #'registration',
