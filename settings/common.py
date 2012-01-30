@@ -114,7 +114,7 @@ MIDDLEWARE_CLASSES = (
 # приложения
 INSTALLED_APPS = (
     # apps
-    'core',
+    'common',
 
     # 3rd party apps
     'south',

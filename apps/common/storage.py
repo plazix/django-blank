@@ -2,7 +2,7 @@
 
 from django.core.files.storage import FileSystemStorage
 
-from core.util.transliterator import Transliterator
+from common.util.transliterator import Transliterator
 
 
 class TransliteratedStorage(FileSystemStorage):
