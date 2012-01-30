@@ -120,7 +120,6 @@ INSTALLED_APPS = (
     'south',
     #'pagination',
     #'annoying',
-    'registration',
     #'sorl.thumbnail',
 
     # django apps

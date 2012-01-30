@@ -9,6 +9,4 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
-
-    url(r'^account/', include('registration.backends.default.urls')),
 )
