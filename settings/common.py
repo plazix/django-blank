@@ -57,7 +57,7 @@ ROOT_URLCONF = 'urls'
 
 DEFAULT_FROM_EMAIL = 'no-reply@yourdomain.tld'
 
-DEFAULT_FILE_STORAGE = 'core.storage.TransliteratedStorage'
+DEFAULT_FILE_STORAGE = 'common.storage.TransliteratedStorage'
 
 
 ########################################################################################################################
@@ -107,7 +107,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
 
-    #'core.middleware.git_revision.GitRevisionMiddleware',
     #'pagination.middleware.PaginationMiddleware',
 )
 
